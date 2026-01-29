@@ -2,7 +2,7 @@ import React from "react";
 
 function GrowthProtocol() {
   return (
-    <section className="py-24 px-6 bg-white text-black">
+    <section id="protocol" className="py-24 px-6 bg-white text-black">
       <div className="max-w-7xl mx-auto">
         <h2 className="font-bodoni text-4xl md:text-5xl mb-16 uppercase tracking-widest text-center">
           The Growth Protocol

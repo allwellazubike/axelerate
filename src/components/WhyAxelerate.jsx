@@ -3,7 +3,10 @@ import NecklaceStack from "../assets/necklace_stack.png";
 
 function WhyAxelerate() {
   return (
-    <section className="flex flex-col md:flex-row min-h-[70vh]">
+    <section
+      id="why-axelerate"
+      className="flex flex-col md:flex-row min-h-[70vh]"
+    >
       {/* Image Side */}
       <div className="w-full md:w-1/2 bg-gray-100 relative min-h-[400px]">
         <img
@@ -19,25 +22,28 @@ function WhyAxelerate() {
           Why Axelerate?
         </h2>
 
-        <div className="font-sans text-lg space-y-6 leading-relaxed">
+        <div className="font-sans text-lg space-y-6 leading-relaxed text-gray-800">
           <p>
-            General marketing agencies use the same strategy for everyone. They
-            try to sell Fine Jewelry the same way they sell fast fashion or
-            gadgets.
+            I have always been obsessed with the concept of Value—why we pay a
+            premium for one stone, but ignore another.
           </p>
-          <p className="font-bold italic">This is a mistake.</p>
-          <p>
-            Fast fashion is an impulse buy. Jewelry is an emotional investment.
+          <p className="font-bold italic">
+            That curiosity is the foundation of my work.
           </p>
           <p>
-            <span className="font-bold">We are Specialists.</span>
-            <br />
-            We understand that your customer isn't just buying gold or silver;
-            they are buying a memory, a promise, or a status symbol. We build
-            campaigns that respect that difference.
+            I bring a dual focus to every project: The precision of a Data
+            Analyst and the eye of a Creative Director.
           </p>
-          <p className="pt-4 text-xl font-bodoni uppercase tracking-wider">
-            You build the legacy. We build the traffic.
+          <p>
+            While most marketers chase the latest trend, I focus on the
+            psychology of what makes a luxury brand desirable.
+          </p>
+          <p>
+            I built Axelerate to bring that discipline to the jewelry industry.
+          </p>
+          <p className="pt-4 text-xl font-bodoni uppercase tracking-wider text-black">
+            I don’t just want to be your agency. I want to be the partner who
+            cares about your brand as much as you do.
           </p>
         </div>
       </div>

@@ -7,7 +7,10 @@ function Partnership() {
   const closeModal = () => setIsModalOpen(false);
 
   return (
-    <section className="py-32 px-6 bg-white text-black text-center relative">
+    <section
+      id="partnership"
+      className="py-32 px-6 bg-white text-black text-center relative"
+    >
       <div className="max-w-3xl mx-auto border-4 border-black p-12 md:p-16">
         <h2 className="font-bodoni text-4xl md:text-5xl mb-4 uppercase tracking-widest font-bold">
           Become A Partner

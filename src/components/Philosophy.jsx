@@ -2,7 +2,10 @@ import React from "react";
 
 function Philosophy() {
   return (
-    <section className="py-24 px-6 bg-black text-white text-center">
+    <section
+      id="philosophy"
+      className="py-24 px-6 bg-black text-white text-center"
+    >
       <div className="max-w-4xl mx-auto">
         <h2 className="font-bodoni text-4xl md:text-5xl mb-12 uppercase tracking-widest">
           The Core Philosophy
