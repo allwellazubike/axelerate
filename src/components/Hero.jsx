@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="min-h-[80vh] flex flex-col items-center justify-center text-center px-6 py-20 bg-white text-black">
+    <section className="min-h-[80vh] mt-6 flex flex-col items-center justify-center text-center px-6 py-20 bg-white text-black">
       <h1 className="font-bodoni text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-tight mb-6 leading-[1.1]">
         Data-Driven Scale.
         <br />
