@@ -1,10 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 function Partnership() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef();
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Send form data to EmailJS
+      const result = await emailjs.sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
+      );
+
+      if (result.status === 200) {
+        alert("Application submitted successfully! We'll be in touch soon.");
+        closeModal();
+        // Reset form
+        formRef.current.reset();
+      }
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      alert("Failed to submit application. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section
@@ -49,6 +79,7 @@ function Partnership() {
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 text-2xl font-bold hover:text-gray-600"
+              disabled={isSubmitting}
             >
               &times;
             </button>
@@ -58,12 +89,9 @@ function Partnership() {
             </h2>
 
             <form
+              ref={formRef}
               className="space-y-6 text-left"
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Application Submitted (Demo)");
-                closeModal();
-              }}
+              onSubmit={handleSubmit}
             >
               {/* 1. The Basics */}
               <div className="space-y-4">
@@ -73,28 +101,36 @@ function Partnership() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
                     type="text"
+                    name="user_name"
                     placeholder="Name"
                     required
                     className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50"
+                    disabled={isSubmitting}
                   />
                   <input
                     type="email"
+                    name="user_email"
                     placeholder="Email"
                     required
                     className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50"
+                    disabled={isSubmitting}
                   />
                 </div>
                 <input
                   type="url"
+                  name="website"
                   placeholder="Brand Website (URL)"
                   required
                   className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50"
+                  disabled={isSubmitting}
                 />
                 <input
                   type="text"
+                  name="instagram"
                   placeholder="Instagram Handle"
                   required
                   className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50"
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -104,8 +140,10 @@ function Partnership() {
                   2. What is your current monthly revenue range?
                 </label>
                 <select
+                  name="monthly_revenue"
                   required
                   className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50 bg-white"
+                  disabled={isSubmitting}
                 >
                   <option value="">Select an option</option>
                   <option value="0-500">$0 - $500 (Just Starting)</option>
@@ -123,9 +161,11 @@ function Partnership() {
                 </label>
                 <input
                   type="text"
+                  name="average_price"
                   placeholder="e.g. $150"
                   required
                   className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50"
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -136,8 +176,10 @@ function Partnership() {
                   right now?
                 </label>
                 <select
+                  name="biggest_challenge"
                   required
                   className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50 bg-white"
+                  disabled={isSubmitting}
                 >
                   <option value="">Select an option</option>
                   <option value="traffic">I have traffic, but no sales.</option>
@@ -159,8 +201,10 @@ function Partnership() {
                   5. What is your monthly budget for paid traffic?
                 </label>
                 <select
+                  name="monthly_budget"
                   required
                   className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50 bg-white"
+                  disabled={isSubmitting}
                 >
                   <option value="">Select an option</option>
                   <option value="under500">Under $500</option>
@@ -177,18 +221,37 @@ function Partnership() {
                   this in the next 30 days?
                 </label>
                 <textarea
+                  name="application_reason"
                   required
                   rows="3"
                   className="w-full p-3 border border-black focus:outline-none focus:bg-gray-50"
+                  disabled={isSubmitting}
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-black text-white font-bold py-4 uppercase tracking-widest hover:bg-gray-800 transition-colors"
+                disabled={isSubmitting}
+                className={`w-full bg-black text-white font-bold py-4 uppercase tracking-widest hover:bg-gray-800 transition-colors ${
+                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                }`}
               >
-                Submit Application
+                {isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg className="animate-spin h-5 w-5 mr-3 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Submitting...
+                  </span>
+                ) : (
+                  'Submit Application'
+                )}
               </button>
+
+              <p className="text-xs text-gray-500 text-center mt-4">
+                By submitting this form, you agree to be contacted by our team.
+              </p>
             </form>
           </div>
         </div>
