@@ -3,10 +3,7 @@ import NecklaceStack from "../assets/necklace_stack.png";
 
 function WhyAxelerate() {
   return (
-    <section
-      id="why-axelerate"
-      className="flex flex-col md:flex-row min-h-[70vh]"
-    >
+    <section id="founder" className="flex flex-col md:flex-row min-h-[70vh]">
       {/* Image Side */}
       <div className="w-full md:w-1/2 bg-gray-100 relative min-h-[400px]">
         <img
@@ -19,31 +16,39 @@ function WhyAxelerate() {
       {/* Text Side */}
       <div className="w-full md:w-1/2 bg-white text-black p-12 lg:p-24 flex flex-col justify-center">
         <h2 className="font-bodoni text-4xl md:text-5xl mb-8 uppercase tracking-widest">
-          Why Axelerate?
+          ABOUT THE FOUNDER: The Architect
         </h2>
 
         <div className="font-sans text-lg space-y-6 leading-relaxed text-gray-800">
-          <p>
-            I have always been obsessed with the concept of Value—why we pay a
-            premium for one stone, but ignore another.
-          </p>
           <p className="font-bold italic">
-            That curiosity is the foundation of my work.
+            "I do not sell jewelry. I engineer desire."
           </p>
           <p>
-            I bring a dual focus to every project: The precision of a Data
-            Analyst and the eye of a Creative Director.
+            The Jewelry Industry is currently divided into two worlds: The "Old
+            Guard" who have heritage but no digital strategy, and the "New Wave"
+            who have attention but no prestige. I built Axelerate to bridge that
+            gap.
           </p>
           <p>
-            While most marketers chase the latest trend, I focus on the
-            psychology of what makes a luxury brand desirable.
+            I am not a photographer. I am not an ad buyer. I am a Commercial
+            Architect.
           </p>
           <p>
-            I built Axelerate to bring that discipline to the jewelry industry.
+            My role is singular: To take a brand that is competing on price and
+            restructure it until it competes on status.
+          </p>
+          <p>
+            We strip away the noise. We refine the offer. We engineer the
+            lighting, the language, and the logistics to ensure that when a
+            client looks at your inventory, the price becomes irrelevant.
+          </p>
+          <p>
+            We do not work with everyone. We work with the few who understand
+            that in the new economy, Attention is the only currency that
+            matters.
           </p>
           <p className="pt-4 text-xl font-bodoni uppercase tracking-wider text-black">
-            I don’t just want to be your agency. I want to be the partner who
-            cares about your brand as much as you do.
+            – Divine Azubike, Founder, Axelerate
           </p>
         </div>
       </div>
