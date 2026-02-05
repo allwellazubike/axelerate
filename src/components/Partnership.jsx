@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 function Partnership() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -16,10 +16,10 @@ function Partnership() {
     try {
       // Send form data to EmailJS
       const result = await emailjs.sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID || 'YOUR_SERVICE_ID',
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID || 'YOUR_TEMPLATE_ID',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_SERVICE_ID",
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID",
         formRef.current,
-        process.env.REACT_APP_EMAILJS_PUBLIC_KEY || 'YOUR_PUBLIC_KEY'
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "YOUR_PUBLIC_KEY",
       );
 
       if (result.status === 200) {
@@ -29,8 +29,10 @@ function Partnership() {
         formRef.current.reset();
       }
     } catch (error) {
-      console.error('EmailJS Error:', error);
-      alert("Failed to submit application. Please try again or contact us directly.");
+      console.error("EmailJS Error:", error);
+      alert(
+        "Failed to submit application. Please try again or contact us directly.",
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -233,19 +235,35 @@ function Partnership() {
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full bg-black text-white font-bold py-4 uppercase tracking-widest hover:bg-gray-800 transition-colors ${
-                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  isSubmitting ? "opacity-70 cursor-not-allowed" : ""
                 }`}
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center">
-                    <svg className="animate-spin h-5 w-5 mr-3 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <svg
+                      className="animate-spin h-5 w-5 mr-3 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
                     </svg>
                     Submitting...
                   </span>
                 ) : (
-                  'Submit Application'
+                  "Submit Application"
                 )}
               </button>
 

@@ -14,9 +14,6 @@ function GrowthProtocol() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {/* Column 1 */}
           <div className="relative group p-6 lg:p-8 hover:-translate-y-2 transition-transform duration-500">
-            <span className="absolute -top-12 -left-4 text-9xl font-bodoni text-gray-200 z-0 select-none">
-              01
-            </span>
             <div className="relative z-10">
               <h3 className="font-bodoni text-3xl mb-4 uppercase tracking-wider font-bold border-b border-black pb-4 inline-block">
                 Traffic Engineering
@@ -71,9 +68,6 @@ function GrowthProtocol() {
 
           {/* Column 2 */}
           <div className="relative group p-6 lg:p-8 hover:-translate-y-2 transition-transform duration-500 delay-100">
-            <span className="absolute -top-12 -left-4 text-9xl font-bodoni text-gray-200 z-0 select-none">
-              02
-            </span>
             <div className="relative z-10">
               <h3 className="font-bodoni text-3xl mb-4 uppercase tracking-wider font-bold border-b border-black pb-4 inline-block">
                 Psychological Creative
@@ -116,9 +110,6 @@ function GrowthProtocol() {
 
           {/* Column 3 */}
           <div className="relative group p-6 lg:p-8 hover:-translate-y-2 transition-transform duration-500 delay-200">
-            <span className="absolute -top-12 -left-4 text-9xl font-bodoni text-gray-200 z-0 select-none">
-              03
-            </span>
             <div className="relative z-10">
               <h3 className="font-bodoni text-3xl mb-4 uppercase tracking-wider font-bold border-b border-black pb-4 inline-block">
                 The Data Room
