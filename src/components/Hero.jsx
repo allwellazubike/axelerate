@@ -9,7 +9,7 @@ function Hero() {
         <span className="italic font-normal">Human-Driven Desire.</span>
       </h1>
       <p className="font-sans text-xl md:text-2xl max-w-4xl mx-auto mb-12 text-gray-800 font-light leading-relaxed">
-        Scaling a jewelry brand requires two distinct skills: The{" "}
+        Scaling a luxury brand requires two distinct skills: The{" "}
         <span className="font-bold">Art</span> of the craft and the{" "}
         <span className="font-bold">Science</span> of finding customers.{" "}
         <br className="hidden md:block" />

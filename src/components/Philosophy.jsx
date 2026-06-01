@@ -25,7 +25,7 @@ function Philosophy() {
           </p>
           <p>
             We use behavioral psychology to target the exact moment of
-            "Need"—placing your jewelry in front of the customer exactly when
+            "Need"—placing your high-assets in front of the customer exactly when
             they are looking for a gift or a symbol of love.
           </p>
         </div>
