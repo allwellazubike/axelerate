@@ -32,7 +32,7 @@ function FAQ() {
     {
       question: "Who is this for?",
       answer:
-        "We partner with High-Jewelry Brands, Heritage Retailers, and Emerging Luxury Houses. We do not judge by the age of the business; we judge by the inventory. If you sell investment-grade assets or high-ticket pieces ($1k+), we are a fit. We do not accept dropshippers or mass-market fashion brands.",
+        "We work with fine jewelry brands, art studios, and emerging luxury houses. We don't care how long you've been in business. We only care about what you create. If you sell high-ticket physical pieces and need the logistics to safely export and sell them to global buyers, we are a fit",
     },
     {
       question: "Will running ads hurt my brand image?",
