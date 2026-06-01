@@ -21,10 +21,10 @@ function WhyAxelerate() {
 
         <div className="font-sans text-lg space-y-6 leading-relaxed text-gray-800">
           <p className="font-bold italic">
-            "I do not sell jewelry. I engineer desire."
+            "I do not just sell luxury. I engineer desire."
           </p>
           <p>
-            The Jewelry Industry is currently divided into two worlds: The "Old
+            The Luxury Goods Industry is currently divided into two worlds: The "Old
             Guard" who have heritage but no digital strategy, and the "New Wave"
             who have attention but no prestige. I built Axelerate to bridge that
             gap.

@@ -18,7 +18,7 @@ function Privacy() {
           </p>
           <p>
             Due to the proprietary nature of our growth methodologies and the
-            hyper-competitive landscape of Fine Jewelry, our portfolio is
+            hyper-competitive landscape of Fine Art and Luxury Assets, our portfolio is
             shielded by Strict Non-Disclosure Agreements (NDAs).
           </p>
           <p className="font-bold text-black uppercase tracking-wide text-xs md:text-sm">
