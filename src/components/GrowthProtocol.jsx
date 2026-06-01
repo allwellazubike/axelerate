@@ -98,13 +98,10 @@ function GrowthProtocol() {
                   <span className="mr-3 text-black font-bold">—</span>
                   <span>
                     <strong className="block font-bold mb-1">
-                      Visual Engineering Scripts
+                      Secure Export & Logistics (Private Client Protocol)
                     </strong>
                     <span className="text-gray-600 font-light">
-                      We do not hold the camera; we direct the outcome. We
-                      provide your content team with precise, scene-by-scene
-                      scripts to capture the specific lighting and angles that
-                      trigger desire, ensuring the product looks expensive.
+                      For our high-net-worth partners, we manage the physical architecture. We privately coordinate international freight, custom export documentation, and the secure transport of physical assets, ensuring a flawless chain of custody from your studio to the final buyer.
                     </span>
                   </span>
                 </li>
